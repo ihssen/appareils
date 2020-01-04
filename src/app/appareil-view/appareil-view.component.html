@@ -3,7 +3,8 @@
     <app-appareil  *ngFor="let appareil of appreils; let i = index"
                     [appareilName]="appareil.name"
                     [appareilStatus]="appareil.status"
-                    [index]="i">
+                    [index]="i"
+                    [id]="appareil.id">
     </app-appareil>
 </ul>
 <button class="btn btn-success"
