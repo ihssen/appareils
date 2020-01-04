@@ -9,6 +9,8 @@ import { AppareilService } from './appareil.service';
 import { AuthComponent } from './auth/auth.component';
 import { AppareilViewComponent } from './appareil-view/appareil-view.component';
 import { Routes, RouterModule } from '@angular/router';
+import { SearchPipe } from './pipes/search.pipe';
+import { FilterByStatePipe } from './pipes/filter-by-state.pipe';
 
 const appRoutes: Routes = [
   { path: 'appareils', component: AppareilViewComponent },
@@ -20,7 +22,9 @@ const appRoutes: Routes = [
     AppComponent,
     AppareilComponent,
     AuthComponent,
-    AppareilViewComponent
+    AppareilViewComponent,
+    SearchPipe,
+    FilterByStatePipe
   ],
   imports: [
     BrowserModule,
