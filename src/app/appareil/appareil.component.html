@@ -2,8 +2,6 @@
                 'list-group-item-success': appareilStatus === 'allumé',
                 'list-group-item-danger': appareilStatus === 'éteint'}">
 
-    <div style="width:20px; height:20px; background-color:red;"     *ngIf="appareilStatus === 'éteint'"></div>
-
     <h4  [ngStyle]="{color: getColor()}">
         Appreil : {{ appareilName }} -- Statut : {{ getStatus()}}
     </h4>

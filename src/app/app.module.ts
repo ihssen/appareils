@@ -9,6 +9,8 @@ import { AppareilService } from './appareil.service';
 import { AuthComponent } from './auth/auth.component';
 import { AppareilViewComponent } from './appareil-view/appareil-view.component';
 import { Routes, RouterModule } from '@angular/router';
+import { SearchPipe } from './pipes/search.pipe';
+import { FilterByStatePipe } from './pipes/filter-by-state.pipe';
 import { SingleAppareilComponent } from './single-appareil/single-appareil.component';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { AuthGuard } from './guards/auth.guard';
@@ -27,6 +29,9 @@ const appRoutes: Routes = [
     AppareilComponent,
     AuthComponent,
     AppareilViewComponent,
+    pipes
+    SearchPipe,
+    FilterByStatePipe
     SingleAppareilComponent,
     FourOhFourComponent
   ],
