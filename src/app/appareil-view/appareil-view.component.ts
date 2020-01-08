@@ -10,6 +10,8 @@ export class AppareilViewComponent implements OnInit {
 
   appreils: any[];
   isAuth = false;
+  search: string;
+  state: string;
 
   constructor(private appreilService: AppareilService) { }
 

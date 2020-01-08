@@ -1,6 +1,16 @@
 <h2>Mes appreils</h2>
+<p>
+    <input [(ngModel)]="search" name="search" class="form-control" />
+</p>
+
+<select [(ngModel)]="state" name="state" class="form-control">
+    <option [value]="'all'"> tt machines</option>
+    <option [value]="'open'">Allumé</option>
+    <option [value]="'close'">Eteint</option>
+</select>
+
 <ul class="list-group">
-    <app-appareil  *ngFor="let appareil of appreils; let i = index"
+    <app-appareil  *ngFor="let appareil of appreils | searchFilter: search | filterByState: state; let i = index"
                     [appareilName]="appareil.name"
                     [appareilStatus]="appareil.status"
                     [index]="i"
